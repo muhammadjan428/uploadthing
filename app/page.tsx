@@ -6,6 +6,7 @@ import { ImageUploader } from "@/components/UploadThing";
 import { Toaster } from "sonner";
 import { getImagesFromDB } from "@/lib/actions/image.actions";
 import { ImageGallery } from "@/components/ImageGallery";
+import { MultipleUploadthing } from "@/components/MultipleUploadthing";
 
 
 export default function Home() {
@@ -19,7 +20,8 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <h1 className="text-2xl font-bold mb-4">Upload Profile Image</h1>
       {/* <ImageUploader onUpload={handleImageUpload} /> */}
-      <ImmediateImageToast onUpload={handleImageUpload} />
+      {/* <ImmediateImageToast onUpload={handleImageUpload} /> */}
+      <MultipleUploadthing onUpload={handleImageUpload} />
       <OurUploadButton />
       {/* <Toaster position="top-right" /> */}
       <Toaster richColors  position="top-center" />
